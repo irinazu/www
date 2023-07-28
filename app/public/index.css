@@ -1,0 +1,337 @@
+body{
+    margin: 0;
+}
+#wrapper{
+    margin-top: 40px;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+/*header*/
+header{
+    background-color: rgba(19, 20, 20, 0.945);
+    height: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.menu_logo{
+    display: flex;
+    font-weight: bold;
+    
+}
+.menu_timeLoad,.menu_stat{
+    color: white;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#errorInTime{
+    position: fixed; top: 0; left: 0; right: 0;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: black;
+}
+#stat{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#timeLoad{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#folderIcon{
+    width: 30px;
+    height: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#titleSiteFolderIcon{
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+}
+
+/*button all folder*/
+#wrapper_allFolder,#wrapper_sortingTypeRadio{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#wrapper_sortingTypeRadio{
+    margin-top: 20px;
+}
+#allFolder{
+    font-size: 16px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(65, 178, 226, 0.726);
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: -3px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+
+}
+#allFolder:hover{
+    cursor: pointer;
+    background-color: rgba(65, 178, 226, 0.952);
+    transition: 0.5s;
+}
+#stat{
+    color: white;
+    outline: none;
+    text-decoration: none;
+}
+#stat:hover{
+    cursor: pointer;
+    color: rgba(65, 178, 226, 0.952);
+    transition: 0.5s;
+}
+/*sorting*/
+label{
+    font-weight: bold;
+}
+
+#separator{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    height: 2px;
+    width: 80%;
+    background-color: black;
+    border-radius: 50%;
+}
+
+#buttonsPath{
+    display: flex;
+    margin-top: 20px;
+    display: flex;
+}
+#wrapperButtonsPath{
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    display: flex;
+}
+#back{
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(39, 104, 133, 0.726);
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: -3px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+#back:hover{
+    cursor: pointer;
+    background-color: rgba(39, 103, 133, 0.89);
+    transition: 0.5s;
+}
+#forward:hover{
+    cursor: pointer;
+    background-color: rgba(39, 103, 133, 0.89);
+    transition: 0.5s;
+}
+#currentCertainFolder{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+footer{
+    background-color: rgba(19, 20, 20, 0.945);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    
+}
+
+/*ceratainFolsder*/
+#folders{
+    font-size: 18px;
+    margin-top: 20px;
+}
+.files{
+    margin-left: 50px;
+    font-size: 17px;
+
+    display: none;
+}
+
+.wrapperDivFolder,.wrapperDivFile{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 9px;
+    transition: 0.3s;
+}
+.wrapperDivFolder:hover,.wrapperDivFile:hover{
+    border-bottom: 1px solid rgba(65, 178, 226, 0.952);
+    transition: 0.3s;
+}
+.ceratainFolder,.certainFile{
+    margin-bottom: 9px;
+    transition: 0.3s;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.ceratainFolder:hover{
+    cursor: pointer;
+    color: rgba(27, 74, 94, 0.726);
+    transition: 0.3s;
+}
+.certainFile:hover{
+    color: rgba(27, 74, 94, 0.726);
+    transition: 0.3s;
+}
+#wrapperDescriptionSizeFile{
+    display: flex;
+    justify-content: right;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+#descriptionSizeFile{
+    font-size: 15px;
+    width: 200px;
+    text-align: end;
+}
+.folderSign{
+    /*visibility: hidden;*/
+    margin-right: 5px;
+    width: 17px;
+    height: 17px;
+    margin-top: auto;
+    margin-bottom: auto;
+    transition: 0.3s;
+}
+.fileSign{
+    margin-right: 5px;
+    width: 17px;
+    height: 17px;
+    margin-top: auto;
+    margin-bottom: auto;
+    transition: 0.3s;
+}
+.arrowSign{
+    opacity: 0.8;
+    margin-right: 10px;
+    width: 19px;
+    height: 19px;
+    margin-top: auto;
+    margin-bottom: auto;
+    transition: 0.3s;
+}
+.arrowSign:hover{
+    opacity: 1;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.arrowSignHidden{
+    visibility: hidden;
+    margin-right: 8px;
+    width: 19px;
+    height: 19px;
+    margin-top: auto;
+    margin-bottom: auto;
+    transition: 0.3s;
+}
+/*.wrapperDivFolder:hover .folderSign{
+    visibility: visible;
+    transition: 0.3s;
+}*/
+.ceratainFolderSize,.certainFileSize{
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.wrapperDivFolderAndImg, .wrapperDivFileAndImg {
+    display: flex;
+}
+
+
+
+/*loader*/
+
+#f{
+    display: none;
+
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+#loader {
+    display: none;
+
+    position: absolute;
+    top:20%;
+    left:45%;
+    z-index: 2;
+    width: 150px;
+    height: 150px;
+    transform:translate(-50%, -50%);
+    border: 16px solid #f3f3f3; /* Светло серый */
+    border-top: 16px solid #3498db; /* Синий */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+/*database*/
+.rowDataBase,.rowDataBaseTitle{
+    display: flex;
+    justify-content: space-between;
+}
+.rowDataBaseTitle{
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    margin-bottom: 20px;
+}
+.rowDataBase .rowMemeber:first-child{
+    width: 27%;
+}
+.rowDataBaseTitle .rowMemeberTitle:first-child{
+    width: 27%;
+}
+.rowMemeber,.rowMemeberTitle{
+    width: 20%;
+    margin-right: 10px;
+}
+
+.rowDataBase{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.493);
+    margin-bottom: 5px;
+
+}
