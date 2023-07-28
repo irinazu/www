@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="./public/index.css">
+
+    <script src="//cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="//cdn.amcharts.com/lib/4/charts.js"></script>
 </head>
 <body>
     <div id="loader"></div>
@@ -33,25 +36,26 @@
          $database = "stat";
          $table = "t_stat";
 
-
          try {
             $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
-            echo "<div class='rowDataBaseTitle'>";
-               echo "<span class='rowMemeberTitle'>Путь</span>";
-               echo "<span class='rowMemeberTitle'>Размер (МБ)</span>";
-               echo "<span class='rowMemeberTitle'>Количество</span>";
-               echo "<span class='rowMemeberTitle'>Время запроса (сек)</span>";
-               echo "<span class='rowMemeberTitle'>Дата</span>";
-            echo "</div>";
+            echo "<table>";
+               echo "<tr>";
+                  echo "<td>Путь</td>";
+                  echo "<td td>Размер (МБ)</td>";
+                  echo "<td td>Количество</td>";
+                  echo "<td td>Время запроса (сек)</td>";
+                  echo "<td td>Дата</td>";
+               echo "</tr>";
             foreach($db->query("SELECT * FROM $table") as $row) {
-               echo "<div class='rowDataBase'>";
-                  echo "<span class='rowMemeber'>" . $row['c_path'] . "</span>";
-                  echo "<span class='rowMemeber'>" . $row['c_totalsize'] . "</span>";
-                  echo "<span class='rowMemeber'>" . $row['c_count'] . "</span>";
-                  echo "<span class='rowMemeber'>" . $row['c_time'] . "</span>";
-                  echo "<span class='rowMemeber'>" . $row['c_date'] . "</span>";
-               echo "</div>";
-         }
+               echo "<tr>";
+                  echo "<td>" . $row['c_path'] . "</td>";
+                  echo "<td class='c_totalsize'>" . $row['c_totalsize'] . "</td>";
+                  echo "<td>" . $row['c_count'] . "</td>";
+                  echo "<td class='c_time'>" . $row['c_time'] . "</td>";
+                  echo "<td>" . $row['c_date'] . "</td>";
+               echo "</tr>";
+            }
+            echo "</table>";
          
          } catch (PDOException $e) {
             print "Error!: " . $e->getMessage() . "<br/>";
@@ -93,6 +97,10 @@
       ?>
 
     </div>
+
+    <div id="chartdiv" style="width: 900px; height: 800px;"></div>
+
+    <script src="./public/chart.js"></script>
 
 </body>
 </html>

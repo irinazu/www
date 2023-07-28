@@ -30,12 +30,6 @@
         </div>
     </header>
 
-    <?php
-          
-
-       
-    ?>
-
     <div id="wrapper">
 
         <div id="wrapper_allFolder">

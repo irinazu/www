@@ -1,7 +1,7 @@
 import { create, deleteFolders } from './el.js';
 var params, root, sor;
 //основной путь
-var ROOTPATH = "/home/irina/Desktop/goProjects/modifySiteSizeProject";
+var ROOTPATH = "/";
 var xhr = new XMLHttpRequest();
 var back = [];
 //время запроса
@@ -61,8 +61,8 @@ export function getCeratainFolderTree(e) {
 function getRequest(params) {
     errorInTime.style.display="none"
 
-    //loader.style.display="block"
-    //f.style.display="block"
+    loader.style.display="block"
+    f.style.display="block"
 
     xhr.open("GET", "http://localhost:8080/dirSize?" + params, true);
     xhr.onreadystatechange = function () {
